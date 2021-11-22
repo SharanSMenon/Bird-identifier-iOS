@@ -9,9 +9,11 @@ import SwiftUI
 
 struct BirdInfo: View {
     @ObservedObject var birdData = ReadData()
-    @Binding var name: String
-    @State var imageURL: String = ""
-    @State var hideNavigationBar: Bool = false
+    @Binding var name: String;
+    @State var imageURL: String = "";
+    @State var hideNavigationBar: Bool = false;
+    @State var showSimilarSpecies: Bool = true;
+    
     var iNaturalistData: Any = []
     let screenSize: CGRect = UIScreen.main.bounds
     
@@ -22,10 +24,12 @@ struct BirdInfo: View {
                     BirdInfoImage(imageURL: self.imageURL, bird: getInfo())
                 }
                 Spacer(minLength: 25)
-                BirdInfoTable(birdInfo: .constant(getInfo()))
+                BirdInfoTable(birdInfo: getInfo())
             }
             .padding()
-            BirdInfoSimilarSpecies(similarSpecies: getSimilarSpecies())
+            if showSimilarSpecies {
+                BirdInfoSimilarSpecies(similarSpecies: getSimilarSpecies())
+            }
         }.onAppear {
             loadData(speciesName: name)
         }

@@ -24,13 +24,18 @@
 		0FB9BDB0274C2E570059F7D3 /* BirdInfoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB9BDAF274C2E570059F7D3 /* BirdInfoImage.swift */; };
 		0FB9BDB2274C305B0059F7D3 /* IdentifyViewClassification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB9BDB1274C305B0059F7D3 /* IdentifyViewClassification.swift */; };
 		0FBDD8C4274B291D0019005D /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBDD8C3274B291D0019005D /* AboutView.swift */; };
+		0FC91352274C33340093AA21 /* BlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC91351274C33340093AA21 /* BlueButton.swift */; };
+		0FC91354274C34C70093AA21 /* SaveObservationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC91353274C34C70093AA21 /* SaveObservationButton.swift */; };
+		0FC91358274C36B30093AA21 /* ObservationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC91357274C36B30093AA21 /* ObservationsView.swift */; };
+		0FC9135B274C3BFD0093AA21 /* ObservationItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC9135A274C3BFD0093AA21 /* ObservationItemView.swift */; };
+		0FC9135D274C3E810093AA21 /* ObservationImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC9135C274C3E810093AA21 /* ObservationImage.swift */; };
 		0FEAB63127495C5500C953A5 /* ImagePredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAB63027495C5500C953A5 /* ImagePredictor.swift */; };
 		0FEAB6352749628C00C953A5 /* BirdModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAB6342749628C00C953A5 /* BirdModel.mlmodel */; };
 		0FEAB638274967AF00C953A5 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAB637274967AF00C953A5 /* ImagePicker.swift */; };
 		0FEAB63B27496AD200C953A5 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAB63A27496AD200C953A5 /* CGImagePropertyOrientation+UIImageOrientation.swift */; };
 		0FEAB63D27496ADA00C953A5 /* VNClassificationObservation+confidenceString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAB63C27496ADA00C953A5 /* VNClassificationObservation+confidenceString.swift */; };
 		0FEAB63F274A9E8400C953A5 /* BirdInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAB63E274A9E8400C953A5 /* BirdInfo.swift */; };
-		B7A609F26F316E897DABB854 /* Pods_BirdIdentifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F4F9A9267468D4A18DFAFF /* Pods_BirdIdentifier.framework */; };
+		32E5C15CE326EC66131D7F39 /* Pods_BirdIdentifier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F4F9A9267468D4A18DFAFF /* Pods_BirdIdentifier.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +57,11 @@
 		0FB9BDAF274C2E570059F7D3 /* BirdInfoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdInfoImage.swift; sourceTree = "<group>"; };
 		0FB9BDB1274C305B0059F7D3 /* IdentifyViewClassification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifyViewClassification.swift; sourceTree = "<group>"; };
 		0FBDD8C3274B291D0019005D /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		0FC91351274C33340093AA21 /* BlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButton.swift; sourceTree = "<group>"; };
+		0FC91353274C34C70093AA21 /* SaveObservationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveObservationButton.swift; sourceTree = "<group>"; };
+		0FC91357274C36B30093AA21 /* ObservationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationsView.swift; sourceTree = "<group>"; };
+		0FC9135A274C3BFD0093AA21 /* ObservationItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationItemView.swift; sourceTree = "<group>"; };
+		0FC9135C274C3E810093AA21 /* ObservationImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationImage.swift; sourceTree = "<group>"; };
 		0FE1D1C3274890A10013FF01 /* birds-model-964.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = "birds-model-964.tflite"; path = "../../../../../birds-model-964.tflite"; sourceTree = "<group>"; };
 		0FEAB63027495C5500C953A5 /* ImagePredictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePredictor.swift; sourceTree = "<group>"; };
 		0FEAB6342749628C00C953A5 /* BirdModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BirdModel.mlmodel; sourceTree = "<group>"; };
@@ -60,8 +70,8 @@
 		0FEAB63C27496ADA00C953A5 /* VNClassificationObservation+confidenceString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "VNClassificationObservation+confidenceString.swift"; path = "../../../../../ClassifyingImagesWithVisionAndCoreML/Extensions/VNClassificationObservation+confidenceString.swift"; sourceTree = "<group>"; };
 		0FEAB63E274A9E8400C953A5 /* BirdInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdInfo.swift; sourceTree = "<group>"; };
 		28F4F9A9267468D4A18DFAFF /* Pods_BirdIdentifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BirdIdentifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B0458163AA6985D2DC449A6 /* Pods-BirdIdentifier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BirdIdentifier.release.xcconfig"; path = "Target Support Files/Pods-BirdIdentifier/Pods-BirdIdentifier.release.xcconfig"; sourceTree = "<group>"; };
-		E472FDF146161EB88A5851E3 /* Pods-BirdIdentifier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BirdIdentifier.debug.xcconfig"; path = "Target Support Files/Pods-BirdIdentifier/Pods-BirdIdentifier.debug.xcconfig"; sourceTree = "<group>"; };
+		CF6E9AF7DF6DBA517AF8DDC4 /* Pods-BirdIdentifier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BirdIdentifier.debug.xcconfig"; path = "Target Support Files/Pods-BirdIdentifier/Pods-BirdIdentifier.debug.xcconfig"; sourceTree = "<group>"; };
+		D8003EB95A9957709DA03FFE /* Pods-BirdIdentifier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BirdIdentifier.release.xcconfig"; path = "Target Support Files/Pods-BirdIdentifier/Pods-BirdIdentifier.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7A609F26F316E897DABB854 /* Pods_BirdIdentifier.framework in Frameworks */,
+				32E5C15CE326EC66131D7F39 /* Pods_BirdIdentifier.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,8 +101,8 @@
 			children = (
 				0F4E66EB27472D1B001CEF8E /* BirdIdentifier */,
 				0F4E66EA27472D1B001CEF8E /* Products */,
-				FDBD99BE36687810F3732AAA /* Pods */,
 				64F962801B0EDD6DE0EE14C1 /* Frameworks */,
+				670E256B9D4B174E799B7D2B /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +130,7 @@
 				0F4E66F227472D1C001CEF8E /* Preview Content */,
 				0F70D6DD274AC433000A6380 /* SpeciesView.swift */,
 				0FBDD8C3274B291D0019005D /* AboutView.swift */,
+				0FC91357274C36B30093AA21 /* ObservationsView.swift */,
 			);
 			path = BirdIdentifier;
 			sourceTree = "<group>";
@@ -148,8 +159,18 @@
 			isa = PBXGroup;
 			children = (
 				0FB9BDB1274C305B0059F7D3 /* IdentifyViewClassification.swift */,
+				0FC91353274C34C70093AA21 /* SaveObservationButton.swift */,
 			);
 			path = IdentifyViewComponents;
+			sourceTree = "<group>";
+		};
+		0FC91359274C3BE10093AA21 /* ObservationComponents */ = {
+			isa = PBXGroup;
+			children = (
+				0FC9135A274C3BFD0093AA21 /* ObservationItemView.swift */,
+				0FC9135C274C3E810093AA21 /* ObservationImage.swift */,
+			);
+			path = ObservationComponents;
 			sourceTree = "<group>";
 		};
 		0FE1D1C1274890810013FF01 /* ml-model */ = {
@@ -165,9 +186,11 @@
 		0FEAB6362749678A00C953A5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0FC91359274C3BE10093AA21 /* ObservationComponents */,
 				0FB9BDB4274C31250059F7D3 /* IdentifyViewComponents */,
 				0FB9BDB3274C310F0059F7D3 /* BirdInfoComponents */,
 				0FEAB637274967AF00C953A5 /* ImagePicker.swift */,
+				0FC91351274C33340093AA21 /* BlueButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -189,11 +212,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FDBD99BE36687810F3732AAA /* Pods */ = {
+		670E256B9D4B174E799B7D2B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E472FDF146161EB88A5851E3 /* Pods-BirdIdentifier.debug.xcconfig */,
-				8B0458163AA6985D2DC449A6 /* Pods-BirdIdentifier.release.xcconfig */,
+				CF6E9AF7DF6DBA517AF8DDC4 /* Pods-BirdIdentifier.debug.xcconfig */,
+				D8003EB95A9957709DA03FFE /* Pods-BirdIdentifier.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -296,8 +319,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FB9BDB2274C305B0059F7D3 /* IdentifyViewClassification.swift in Sources */,
+				0FC9135D274C3E810093AA21 /* ObservationImage.swift in Sources */,
 				0FBDD8C4274B291D0019005D /* AboutView.swift in Sources */,
+				0FC9135B274C3BFD0093AA21 /* ObservationItemView.swift in Sources */,
 				0F4E66F627472D1C001CEF8E /* Persistence.swift in Sources */,
+				0FC91358274C36B30093AA21 /* ObservationsView.swift in Sources */,
 				0FEAB63127495C5500C953A5 /* ImagePredictor.swift in Sources */,
 				0F70D6DA274ABC4D000A6380 /* iNaturalistData.swift in Sources */,
 				0FEAB63F274A9E8400C953A5 /* BirdInfo.swift in Sources */,
@@ -309,6 +335,8 @@
 				0FB9BDAE274C2A360059F7D3 /* BirdInfoSimilarSpecies.swift in Sources */,
 				0FEAB63B27496AD200C953A5 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
 				0F70D6DE274AC433000A6380 /* SpeciesView.swift in Sources */,
+				0FC91352274C33340093AA21 /* BlueButton.swift in Sources */,
+				0FC91354274C34C70093AA21 /* SaveObservationButton.swift in Sources */,
 				0F0864F0274AA8E200D01A48 /* BirdSpecies.swift in Sources */,
 				0F4E66ED27472D1B001CEF8E /* BirdIdentifierApp.swift in Sources */,
 				0FB9BDAC274C292A0059F7D3 /* BirdInfoTable.swift in Sources */,
@@ -439,7 +467,7 @@
 		};
 		0F4E66FD27472D1C001CEF8E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E472FDF146161EB88A5851E3 /* Pods-BirdIdentifier.debug.xcconfig */;
+			baseConfigurationReference = CF6E9AF7DF6DBA517AF8DDC4 /* Pods-BirdIdentifier.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -472,7 +500,7 @@
 		};
 		0F4E66FE27472D1C001CEF8E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B0458163AA6985D2DC449A6 /* Pods-BirdIdentifier.release.xcconfig */;
+			baseConfigurationReference = D8003EB95A9957709DA03FFE /* Pods-BirdIdentifier.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

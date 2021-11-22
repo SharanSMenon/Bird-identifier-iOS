@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct IdentifyViewClassification: View {
-    @State var classification: String
-    @State var displayName: String
+    var classification: String
+    var displayName: String
     @Binding var showInfoSheet: Bool;
     var body: some View {
         VStack {

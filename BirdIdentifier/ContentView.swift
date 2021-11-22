@@ -21,6 +21,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("Species", systemImage: "list.dash")
                 }
+            ObservationsView()
+                .tabItem {
+                    Label("Observations", systemImage: "camera")
+                }
             AboutView()
                 .tabItem {
                     Label("About", systemImage:"info.circle")

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Photos
 import SwiftUI
 
 struct ImagePicker: UIViewControllerRepresentable {
@@ -18,7 +19,7 @@ struct ImagePicker: UIViewControllerRepresentable {
     var completionHandler: CompletionHandler
     @Environment(\.presentationMode) private var presentationMode
     
-
+    
     func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
         
         let imagePicker = UIImagePickerController()
@@ -50,8 +51,6 @@ struct ImagePicker: UIViewControllerRepresentable {
             if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
                 parent.selectedImage = image
                 parent.completionHandler(image)
-                
-                
             }
             
             parent.presentationMode.wrappedValue.dismiss()

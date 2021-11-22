@@ -22,6 +22,7 @@ struct Identify: View {
     
     var body: some View {
         VStack {
+            if classification != "" {
             Image(uiImage: self.image)
                 .resizable()
                 .scaledToFill()
@@ -31,7 +32,16 @@ struct Identify: View {
                         IdentifyViewClassification(classification: self.classification, displayName: self.displayName, showInfoSheet: self.$showInfoSheet)
                     }
                 }
-            
+                .overlay(alignment:.topLeading) {
+                    if classification != "" && classification != "background" {
+                        SaveObservationButton(observedImage: self.image, name:self.classification)
+                    }
+                }
+            } else {
+                Spacer()
+                Text("Take a photo or select an image")
+            }
+            Spacer()
             HStack(spacing:0) {
                 Button(action: {
                     self.showPhotoLibrary = true
@@ -43,12 +53,8 @@ struct Identify: View {
                         Text("Photos")
                             .font(.headline)
                     }
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50)
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(20)
-                    .padding()
                 }
+                .buttonStyle(BlueButton())
                 Button(action: {
                     self.showCamera = true
                 }) {
@@ -59,13 +65,10 @@ struct Identify: View {
                         Text("Camera")
                             .font(.headline)
                     }
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 50)
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(20)
-                    .padding(.horizontal)
                 }
+                .buttonStyle(BlueButton())
             }
+            Divider()
         }
         .sheet(isPresented: $showPhotoLibrary) {
             ImagePicker(sourceType: .photoLibrary, selectedImage: self.$image, completionHandler: onPick)
@@ -85,11 +88,8 @@ struct Identify: View {
     private func classifyImage(image: UIImage) {
         do {
             try self.predictor.makePredictions(for: image, completionHandler: imagePredictionHandler)
-        } catch {
-            print("Vision was unable to make a prediction")
-        }
+        } catch {}
     }
-    
     private func imagePredictionHandler(_ predictions: [ImagePredictor.Prediction]?) {
         guard let predictions = predictions else {
             print("No Prediction")
@@ -97,15 +97,12 @@ struct Identify: View {
         }
         let formattedPredictions = formatPredictions(predictions)
         self.classification = formattedPredictions[0]
-        
+        print(self.classification)
     }
-    
     private func formatPredictions(_ predictions: [ImagePredictor.Prediction]) -> [String] {
-        // Vision sorts the classifications in descending confidence order.
         let topPredictions: [String] = predictions.prefix(predictionsToShow).map { prediction in
             var name = prediction.classification
-            
-            // For classifications with more than one name, keep the one before the first comma.
+
             if let firstComma = name.firstIndex(of: ",") {
                 name = String(name.prefix(upTo: firstComma))
             }
