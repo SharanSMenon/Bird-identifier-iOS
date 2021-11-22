@@ -54,6 +54,10 @@ class ReadData: ObservableObject {
         return Array(species.filter {($0.genus == genus) && ($0.scientific != scientific)})
     }
     
+    func getFamily(family: String, scientific: String) -> [Bird] {
+        return Array(species.filter {($0.family == family) && ($0.scientific != scientific)})
+    }
+    
     func getMock() -> [Bird] {
         return Array(species[0...5])
     }

@@ -9,7 +9,6 @@ import UIKit
 import SwiftUI
 import CoreData
 import CoreML
-//import TensorFlowLite
 
 struct ContentView: View {
     var body: some View {
@@ -21,6 +20,10 @@ struct ContentView: View {
             SpeciesView()
                 .tabItem {
                     Label("Species", systemImage: "list.dash")
+                }
+            AboutView()
+                .tabItem {
+                    Label("About", systemImage:"info.circle")
                 }
         }
     }

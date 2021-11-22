@@ -12,18 +12,21 @@ struct BirdInfoSheet: View {
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        VStack {
-            HStack {
-                Spacer()
-                Button(action: {
-                    dismiss()
-                }) {
-                    Text("Dismiss")
+        NavigationView {
+            VStack {
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        dismiss()
+                    }) {
+                        Text("Dismiss")
+                    }
                 }
+                .padding(.horizontal)
+                .padding(.top)
+                BirdInfo(name: .constant(name), hideNavigationBar: true)
             }
-            .padding(.horizontal)
-            .padding(.top)
-            BirdInfo(name: .constant(name))
+            .navigationBarHidden(true)
         }
     }
 }
