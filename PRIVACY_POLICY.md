@@ -8,3 +8,5 @@ The model identifies birds offline, regardless of internet connectivity. The onl
 
 We do not access/use the location data saved in any of your images, whether it was taken by camera or uploaded from your photo library.
 
+The app has links to 2 websites, GitHub and the web version of the bird identifier app. If you choose to click those links, you are subject to the privacy policy of those two websites, and they may collect data on you. We will not have access to any data they may collect.
+
