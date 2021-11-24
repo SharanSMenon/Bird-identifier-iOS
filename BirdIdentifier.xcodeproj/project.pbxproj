@@ -40,7 +40,7 @@
 
 /* Begin PBXFileReference section */
 		0F0864EF274AA8E200D01A48 /* BirdSpecies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdSpecies.swift; sourceTree = "<group>"; };
-		0F4E66E927472D1B001CEF8E /* BirdIdentifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirdIdentifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F4E66E927472D1B001CEF8E /* Bird Identifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bird Identifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F4E66EC27472D1B001CEF8E /* BirdIdentifierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdIdentifierApp.swift; sourceTree = "<group>"; };
 		0F4E66EE27472D1B001CEF8E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0F4E66F027472D1C001CEF8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,6 +69,8 @@
 		0FEAB63A27496AD200C953A5 /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CGImagePropertyOrientation+UIImageOrientation.swift"; path = "../../../../../ClassifyingImagesWithVisionAndCoreML/Extensions/CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
 		0FEAB63C27496ADA00C953A5 /* VNClassificationObservation+confidenceString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "VNClassificationObservation+confidenceString.swift"; path = "../../../../../ClassifyingImagesWithVisionAndCoreML/Extensions/VNClassificationObservation+confidenceString.swift"; sourceTree = "<group>"; };
 		0FEAB63E274A9E8400C953A5 /* BirdInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdInfo.swift; sourceTree = "<group>"; };
+		0FEE38CB274ED28D004D2BDA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0FEE38CC274ED969004D2BDA /* PRIVACY_POLICY.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = PRIVACY_POLICY.md; sourceTree = "<group>"; };
 		28F4F9A9267468D4A18DFAFF /* Pods_BirdIdentifier.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BirdIdentifier.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF6E9AF7DF6DBA517AF8DDC4 /* Pods-BirdIdentifier.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BirdIdentifier.debug.xcconfig"; path = "Target Support Files/Pods-BirdIdentifier/Pods-BirdIdentifier.debug.xcconfig"; sourceTree = "<group>"; };
 		D8003EB95A9957709DA03FFE /* Pods-BirdIdentifier.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BirdIdentifier.release.xcconfig"; path = "Target Support Files/Pods-BirdIdentifier/Pods-BirdIdentifier.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +101,8 @@
 		0F4E66E027472D1B001CEF8E = {
 			isa = PBXGroup;
 			children = (
+				0FEE38CC274ED969004D2BDA /* PRIVACY_POLICY.md */,
+				0FEE38CB274ED28D004D2BDA /* README.md */,
 				0F4E66EB27472D1B001CEF8E /* BirdIdentifier */,
 				0F4E66EA27472D1B001CEF8E /* Products */,
 				64F962801B0EDD6DE0EE14C1 /* Frameworks */,
@@ -109,7 +113,7 @@
 		0F4E66EA27472D1B001CEF8E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0F4E66E927472D1B001CEF8E /* BirdIdentifier.app */,
+				0F4E66E927472D1B001CEF8E /* Bird Identifier.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -239,7 +243,7 @@
 			);
 			name = BirdIdentifier;
 			productName = BirdIdentifier;
-			productReference = 0F4E66E927472D1B001CEF8E /* BirdIdentifier.app */;
+			productReference = 0F4E66E927472D1B001CEF8E /* Bird Identifier.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -491,10 +495,10 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sharansajivmenon.BirdIdentifier;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Bird Identifier";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -524,10 +528,10 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sharansajivmenon.BirdIdentifier;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Bird Identifier";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

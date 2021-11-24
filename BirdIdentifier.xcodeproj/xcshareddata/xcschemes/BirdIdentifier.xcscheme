@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0F4E66E827472D1B001CEF8E"
-               BuildableName = "BirdIdentifier.app"
+               BuildableName = "Bird Identifier.app"
                BlueprintName = "BirdIdentifier"
                ReferencedContainer = "container:BirdIdentifier.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0F4E66E827472D1B001CEF8E"
-            BuildableName = "BirdIdentifier.app"
+            BuildableName = "Bird Identifier.app"
             BlueprintName = "BirdIdentifier"
             ReferencedContainer = "container:BirdIdentifier.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "0F4E66E827472D1B001CEF8E"
-            BuildableName = "BirdIdentifier.app"
+            BuildableName = "Bird Identifier.app"
             BlueprintName = "BirdIdentifier"
             ReferencedContainer = "container:BirdIdentifier.xcodeproj">
          </BuildableReference>
