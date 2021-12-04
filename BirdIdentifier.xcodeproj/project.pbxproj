@@ -29,6 +29,10 @@
 		0FC91358274C36B30093AA21 /* ObservationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC91357274C36B30093AA21 /* ObservationsView.swift */; };
 		0FC9135B274C3BFD0093AA21 /* ObservationItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC9135A274C3BFD0093AA21 /* ObservationItemView.swift */; };
 		0FC9135D274C3E810093AA21 /* ObservationImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC9135C274C3E810093AA21 /* ObservationImage.swift */; };
+		0FDB76FF275BDA7C0023148C /* BirdListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDB76FE275BDA7C0023148C /* BirdListView.swift */; };
+		0FDB7701275BDC890023148C /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDB7700275BDC890023148C /* OrderView.swift */; };
+		0FDB7703275BDDDB0023148C /* FamilyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDB7702275BDDDB0023148C /* FamilyView.swift */; };
+		0FDB7705275BDF530023148C /* GenusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDB7704275BDF530023148C /* GenusView.swift */; };
 		0FEAB63127495C5500C953A5 /* ImagePredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAB63027495C5500C953A5 /* ImagePredictor.swift */; };
 		0FEAB6352749628C00C953A5 /* BirdModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAB6342749628C00C953A5 /* BirdModel.mlmodel */; };
 		0FEAB638274967AF00C953A5 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAB637274967AF00C953A5 /* ImagePicker.swift */; };
@@ -62,12 +66,16 @@
 		0FC91357274C36B30093AA21 /* ObservationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationsView.swift; sourceTree = "<group>"; };
 		0FC9135A274C3BFD0093AA21 /* ObservationItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationItemView.swift; sourceTree = "<group>"; };
 		0FC9135C274C3E810093AA21 /* ObservationImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservationImage.swift; sourceTree = "<group>"; };
+		0FDB76FE275BDA7C0023148C /* BirdListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdListView.swift; sourceTree = "<group>"; };
+		0FDB7700275BDC890023148C /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		0FDB7702275BDDDB0023148C /* FamilyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyView.swift; sourceTree = "<group>"; };
+		0FDB7704275BDF530023148C /* GenusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenusView.swift; sourceTree = "<group>"; };
 		0FE1D1C3274890A10013FF01 /* birds-model-964.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = "birds-model-964.tflite"; path = "../../../../../birds-model-964.tflite"; sourceTree = "<group>"; };
 		0FEAB63027495C5500C953A5 /* ImagePredictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePredictor.swift; sourceTree = "<group>"; };
 		0FEAB6342749628C00C953A5 /* BirdModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BirdModel.mlmodel; sourceTree = "<group>"; };
 		0FEAB637274967AF00C953A5 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		0FEAB63A27496AD200C953A5 /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CGImagePropertyOrientation+UIImageOrientation.swift"; path = "../../../../../ClassifyingImagesWithVisionAndCoreML/Extensions/CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
-		0FEAB63C27496ADA00C953A5 /* VNClassificationObservation+confidenceString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "VNClassificationObservation+confidenceString.swift"; path = "../../../../../ClassifyingImagesWithVisionAndCoreML/Extensions/VNClassificationObservation+confidenceString.swift"; sourceTree = "<group>"; };
+		0FEAB63A27496AD200C953A5 /* CGImagePropertyOrientation+UIImageOrientation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImagePropertyOrientation+UIImageOrientation.swift"; sourceTree = "<group>"; };
+		0FEAB63C27496ADA00C953A5 /* VNClassificationObservation+confidenceString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "VNClassificationObservation+confidenceString.swift"; sourceTree = "<group>"; };
 		0FEAB63E274A9E8400C953A5 /* BirdInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdInfo.swift; sourceTree = "<group>"; };
 		0FEE38CB274ED28D004D2BDA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0FEE38CC274ED969004D2BDA /* PRIVACY_POLICY.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = PRIVACY_POLICY.md; sourceTree = "<group>"; };
@@ -177,6 +185,17 @@
 			path = ObservationComponents;
 			sourceTree = "<group>";
 		};
+		0FDB76FD275BDA690023148C /* SpeciesViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				0FDB76FE275BDA7C0023148C /* BirdListView.swift */,
+				0FDB7700275BDC890023148C /* OrderView.swift */,
+				0FDB7702275BDDDB0023148C /* FamilyView.swift */,
+				0FDB7704275BDF530023148C /* GenusView.swift */,
+			);
+			path = SpeciesViewComponents;
+			sourceTree = "<group>";
+		};
 		0FE1D1C1274890810013FF01 /* ml-model */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +209,7 @@
 		0FEAB6362749678A00C953A5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0FDB76FD275BDA690023148C /* SpeciesViewComponents */,
 				0FC91359274C3BE10093AA21 /* ObservationComponents */,
 				0FB9BDB4274C31250059F7D3 /* IdentifyViewComponents */,
 				0FB9BDB3274C310F0059F7D3 /* BirdInfoComponents */,
@@ -329,6 +349,7 @@
 				0F4E66F627472D1C001CEF8E /* Persistence.swift in Sources */,
 				0FC91358274C36B30093AA21 /* ObservationsView.swift in Sources */,
 				0FEAB63127495C5500C953A5 /* ImagePredictor.swift in Sources */,
+				0FDB76FF275BDA7C0023148C /* BirdListView.swift in Sources */,
 				0F70D6DA274ABC4D000A6380 /* iNaturalistData.swift in Sources */,
 				0FEAB63F274A9E8400C953A5 /* BirdInfo.swift in Sources */,
 				0FEAB63D27496ADA00C953A5 /* VNClassificationObservation+confidenceString.swift in Sources */,
@@ -340,11 +361,14 @@
 				0FEAB63B27496AD200C953A5 /* CGImagePropertyOrientation+UIImageOrientation.swift in Sources */,
 				0F70D6DE274AC433000A6380 /* SpeciesView.swift in Sources */,
 				0FC91352274C33340093AA21 /* BlueButton.swift in Sources */,
+				0FDB7705275BDF530023148C /* GenusView.swift in Sources */,
 				0FC91354274C34C70093AA21 /* SaveObservationButton.swift in Sources */,
+				0FDB7703275BDDDB0023148C /* FamilyView.swift in Sources */,
 				0F0864F0274AA8E200D01A48 /* BirdSpecies.swift in Sources */,
 				0F4E66ED27472D1B001CEF8E /* BirdIdentifierApp.swift in Sources */,
 				0FB9BDAC274C292A0059F7D3 /* BirdInfoTable.swift in Sources */,
 				0F70D6E0274AC667000A6380 /* BirdInfoSheet.swift in Sources */,
+				0FDB7701275BDC890023148C /* OrderView.swift in Sources */,
 				0FEAB638274967AF00C953A5 /* ImagePicker.swift in Sources */,
 				0F4E66F927472D1C001CEF8E /* BirdIdentifier.xcdatamodeld in Sources */,
 			);
@@ -493,7 +517,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sharansajivmenon.BirdIdentifier;
 				PRODUCT_NAME = "Bird Identifier";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -526,7 +550,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sharansajivmenon.BirdIdentifier;
 				PRODUCT_NAME = "Bird Identifier";
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -20,6 +20,15 @@ struct AboutView: View {
             Text("")
             Text("Simplly pick an image from your camera roll or shoot a photo, and the AI will identify it for you. Click on the classification to learn more about the species and view similar species.")
             Spacer()
+            GroupBox(label: Label("Donate", systemImage: "dollarsign.circle")) {
+                HStack {
+                    VStack(alignment:.leading) {
+                        Text("If you like my app, please consider donating to my college fund.")
+                        Link("Click to donate.", destination: URL(string: "https://backer.com/sharansajivmenon")!)
+                        }
+                    Spacer()
+                }
+            }
             GroupBox(label: Label("Web Version", systemImage: "safari")) {
                 HStack {
                     Link("Click here to view the Web Version",
@@ -35,12 +44,14 @@ struct AboutView: View {
                     Spacer()
                 }
             }
-            Text("Model from TFHub. Trained on iNaturalist 2017")
-                .font(.subheadline)
-                .foregroundColor(.gray)
-            Text("Created By Sharan Sajiv Menon")
-                .font(.subheadline)
-                .foregroundColor(.gray)
+            Group {
+                Text("Model from TFHub. Trained on iNaturalist 2017")
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+                Text("Created By Sharan Sajiv Menon")
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+            }
         }
         .padding()
     }

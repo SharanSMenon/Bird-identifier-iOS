@@ -54,8 +54,38 @@ class ReadData: ObservableObject {
         return Array(species.filter {($0.genus == genus) && ($0.scientific != scientific)})
     }
     
+    func getGenus(genus: String) -> [Bird] {
+        return Array(species.filter {($0.genus == genus)})
+    }
+    
     func getFamily(family: String, scientific: String) -> [Bird] {
         return Array(species.filter {($0.family == family) && ($0.scientific != scientific)})
+    }
+    
+    func getFamily(family: String) -> [Bird] {
+        return Array(species.filter {($0.family == family)})
+    }
+    
+    func getOrder(order: String, scientific: String) -> [Bird] {
+        return Array(species.filter {($0.order == order) && ($0.scientific != scientific)})
+    }
+    
+    func getOrder(order: String) -> [Bird] {
+        return Array(species.filter {($0.order == order)})
+    }
+    
+    func getAllOrders() -> [String] {
+        return Array(Set(species.map {$0.order}))
+    }
+    
+    func getFamiliesInOrder(order: String) -> [String] {
+        let orderSpecies: [Bird] = Array(species.filter {$0.order == order})
+        return Array(Set(orderSpecies.map {$0.family}))
+    }
+    
+    func getGenusInFamily(family: String) -> [String] {
+        let familySpecies: [Bird] = Array(species.filter {$0.family == family})
+        return Array(Set(familySpecies.map {$0.genus}))
     }
     
     func getMock() -> [Bird] {
