@@ -42,32 +42,26 @@ struct BirdInfo: View {
         return genus
     }
     private func getInfo() -> Bird {
-        return birdData.getInfo(scientific: self.name)
+        let data = birdData.getInfo(scientific: self.name)
+        if data.scientific != self.name {
+            let genus = self.name.components(separatedBy: " ")[0]
+            let genusData = birdData.getGenus(genus: genus)
+            return genusData[0]
+        }
+        return data
     }
     private func setImageData(imageURL: String) {
         print(imageURL)
         self.imageURL = imageURL
     }
     private func loadData(speciesName: String) -> Void {
-        let speciesText = speciesName.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-        let url = URL(string: "https://api.inaturalist.org/v1/taxa?q=\(speciesText!)&rank=species")!
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        let task = URLSession.shared.dataTask(with: url) {data, response, error in
-            if let data = data {
-                do {
-                    let bird = try JSONDecoder().decode(iNatResponse.self, from: data)
-                    print(bird.results[0].default_photo.medium_url)
-                    setImageData(imageURL: bird.results[0].default_photo.medium_url)
-                } catch {
-                    print(error)
-                }
-            } else if let error = error {
-                print("Request Failed \(error)")
+        let iNat = iNaturalistAPI(scientificName: speciesName)
+        iNat.callAPI(completionHandler: {bird in
+            if bird.results.count > 0 {
+                print(bird.results[0].default_photo.medium_url)
+                setImageData(imageURL: bird.results[0].default_photo.medium_url)
             }
-        }
-        task.resume()
+        })
     }
     
 }

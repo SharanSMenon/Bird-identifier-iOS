@@ -9,9 +9,9 @@ import SwiftUI
 
 struct SaveObservationButton: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @State var observedImage: UIImage
-    @State var name: String
-    @State var saved = false
+    @Binding var observedImage: UIImage
+    @Binding var name: String
+    @Binding var saved: Bool
     
     var body: some View {
         HStack {
@@ -19,6 +19,8 @@ struct SaveObservationButton: View {
                 if !saved {
                     saved = true
                     addItem()
+                    let impactMed = UIImpactFeedbackGenerator(style: .soft)
+                    impactMed.impactOccurred()
                 }
             }) {
                 Text(saved ? "Saved!" : "Save Observation")

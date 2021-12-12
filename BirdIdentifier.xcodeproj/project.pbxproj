@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0F0864F0274AA8E200D01A48 /* BirdSpecies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0864EF274AA8E200D01A48 /* BirdSpecies.swift */; };
+		0F32F29C2762D4AD00D3EAD6 /* PredictionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32F29B2762D4AD00D3EAD6 /* PredictionList.swift */; };
+		0F32F29E2762D5A300D3EAD6 /* PredictionListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32F29D2762D5A300D3EAD6 /* PredictionListRow.swift */; };
+		0F32F2A02762D5DF00D3EAD6 /* NavigationLazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F32F29F2762D5DF00D3EAD6 /* NavigationLazyView.swift */; };
 		0F4E66ED27472D1B001CEF8E /* BirdIdentifierApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4E66EC27472D1B001CEF8E /* BirdIdentifierApp.swift */; };
 		0F4E66EF27472D1B001CEF8E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4E66EE27472D1B001CEF8E /* ContentView.swift */; };
 		0F4E66F127472D1C001CEF8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F4E66F027472D1C001CEF8E /* Assets.xcassets */; };
@@ -33,6 +36,7 @@
 		0FDB7701275BDC890023148C /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDB7700275BDC890023148C /* OrderView.swift */; };
 		0FDB7703275BDDDB0023148C /* FamilyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDB7702275BDDDB0023148C /* FamilyView.swift */; };
 		0FDB7705275BDF530023148C /* GenusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDB7704275BDF530023148C /* GenusView.swift */; };
+		0FE4AD0427651B500085547C /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE4AD0327651B500085547C /* Haptics.swift */; };
 		0FEAB63127495C5500C953A5 /* ImagePredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAB63027495C5500C953A5 /* ImagePredictor.swift */; };
 		0FEAB6352749628C00C953A5 /* BirdModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAB6342749628C00C953A5 /* BirdModel.mlmodel */; };
 		0FEAB638274967AF00C953A5 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEAB637274967AF00C953A5 /* ImagePicker.swift */; };
@@ -44,6 +48,9 @@
 
 /* Begin PBXFileReference section */
 		0F0864EF274AA8E200D01A48 /* BirdSpecies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdSpecies.swift; sourceTree = "<group>"; };
+		0F32F29B2762D4AD00D3EAD6 /* PredictionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionList.swift; sourceTree = "<group>"; };
+		0F32F29D2762D5A300D3EAD6 /* PredictionListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictionListRow.swift; sourceTree = "<group>"; };
+		0F32F29F2762D5DF00D3EAD6 /* NavigationLazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLazyView.swift; sourceTree = "<group>"; };
 		0F4E66E927472D1B001CEF8E /* Bird Identifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bird Identifier.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F4E66EC27472D1B001CEF8E /* BirdIdentifierApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdIdentifierApp.swift; sourceTree = "<group>"; };
 		0F4E66EE27472D1B001CEF8E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +78,8 @@
 		0FDB7702275BDDDB0023148C /* FamilyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyView.swift; sourceTree = "<group>"; };
 		0FDB7704275BDF530023148C /* GenusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenusView.swift; sourceTree = "<group>"; };
 		0FE1D1C3274890A10013FF01 /* birds-model-964.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = "birds-model-964.tflite"; path = "../../../../../birds-model-964.tflite"; sourceTree = "<group>"; };
+		0FE4AD0327651B500085547C /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
+		0FE4AD05276525C60085547C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0FEAB63027495C5500C953A5 /* ImagePredictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePredictor.swift; sourceTree = "<group>"; };
 		0FEAB6342749628C00C953A5 /* BirdModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BirdModel.mlmodel; sourceTree = "<group>"; };
 		0FEAB637274967AF00C953A5 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -129,20 +138,21 @@
 		0F4E66EB27472D1B001CEF8E /* BirdIdentifier */ = {
 			isa = PBXGroup;
 			children = (
-				0F70D6DB274AC37C000A6380 /* IdentifyView.swift */,
+				0F4E66F727472D1C001CEF8E /* BirdIdentifier.xcdatamodeld */,
+				0F4E66F027472D1C001CEF8E /* Assets.xcassets */,
+				0FE4AD05276525C60085547C /* Info.plist */,
+				0FE1D1C1274890810013FF01 /* ml-model */,
 				0F0864EE274AA8D200D01A48 /* SpeciesData */,
 				0FEAB63927496A9800C953A5 /* Extensions */,
 				0FEAB6362749678A00C953A5 /* Components */,
-				0FE1D1C1274890810013FF01 /* ml-model */,
 				0F4E66EC27472D1B001CEF8E /* BirdIdentifierApp.swift */,
 				0F4E66EE27472D1B001CEF8E /* ContentView.swift */,
-				0F4E66F027472D1C001CEF8E /* Assets.xcassets */,
 				0F4E66F527472D1C001CEF8E /* Persistence.swift */,
-				0F4E66F727472D1C001CEF8E /* BirdIdentifier.xcdatamodeld */,
-				0F4E66F227472D1C001CEF8E /* Preview Content */,
+				0F70D6DB274AC37C000A6380 /* IdentifyView.swift */,
 				0F70D6DD274AC433000A6380 /* SpeciesView.swift */,
 				0FBDD8C3274B291D0019005D /* AboutView.swift */,
 				0FC91357274C36B30093AA21 /* ObservationsView.swift */,
+				0F4E66F227472D1C001CEF8E /* Preview Content */,
 			);
 			path = BirdIdentifier;
 			sourceTree = "<group>";
@@ -172,6 +182,8 @@
 			children = (
 				0FB9BDB1274C305B0059F7D3 /* IdentifyViewClassification.swift */,
 				0FC91353274C34C70093AA21 /* SaveObservationButton.swift */,
+				0F32F29B2762D4AD00D3EAD6 /* PredictionList.swift */,
+				0F32F29D2762D5A300D3EAD6 /* PredictionListRow.swift */,
 			);
 			path = IdentifyViewComponents;
 			sourceTree = "<group>";
@@ -224,6 +236,8 @@
 			children = (
 				0FEAB63C27496ADA00C953A5 /* VNClassificationObservation+confidenceString.swift */,
 				0FEAB63A27496AD200C953A5 /* CGImagePropertyOrientation+UIImageOrientation.swift */,
+				0F32F29F2762D5DF00D3EAD6 /* NavigationLazyView.swift */,
+				0FE4AD0327651B500085547C /* Haptics.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -273,7 +287,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1300;
+				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
 					0F4E66E827472D1B001CEF8E = {
@@ -350,6 +364,8 @@
 				0FC91358274C36B30093AA21 /* ObservationsView.swift in Sources */,
 				0FEAB63127495C5500C953A5 /* ImagePredictor.swift in Sources */,
 				0FDB76FF275BDA7C0023148C /* BirdListView.swift in Sources */,
+				0F32F29E2762D5A300D3EAD6 /* PredictionListRow.swift in Sources */,
+				0F32F29C2762D4AD00D3EAD6 /* PredictionList.swift in Sources */,
 				0F70D6DA274ABC4D000A6380 /* iNaturalistData.swift in Sources */,
 				0FEAB63F274A9E8400C953A5 /* BirdInfo.swift in Sources */,
 				0FEAB63D27496ADA00C953A5 /* VNClassificationObservation+confidenceString.swift in Sources */,
@@ -364,12 +380,14 @@
 				0FDB7705275BDF530023148C /* GenusView.swift in Sources */,
 				0FC91354274C34C70093AA21 /* SaveObservationButton.swift in Sources */,
 				0FDB7703275BDDDB0023148C /* FamilyView.swift in Sources */,
+				0FE4AD0427651B500085547C /* Haptics.swift in Sources */,
 				0F0864F0274AA8E200D01A48 /* BirdSpecies.swift in Sources */,
 				0F4E66ED27472D1B001CEF8E /* BirdIdentifierApp.swift in Sources */,
 				0FB9BDAC274C292A0059F7D3 /* BirdInfoTable.swift in Sources */,
 				0F70D6E0274AC667000A6380 /* BirdInfoSheet.swift in Sources */,
 				0FDB7701275BDC890023148C /* OrderView.swift in Sources */,
 				0FEAB638274967AF00C953A5 /* ImagePicker.swift in Sources */,
+				0F32F2A02762D5DF00D3EAD6 /* NavigationLazyView.swift in Sources */,
 				0F4E66F927472D1C001CEF8E /* BirdIdentifier.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,19 +523,20 @@
 				DEVELOPMENT_TEAM = 739NVR7T9C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BirdIdentifier/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Need to Access the Camera for taking Photos of Birds.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sharansajivmenon.BirdIdentifier;
 				PRODUCT_NAME = "Bird Identifier";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -538,19 +557,20 @@
 				DEVELOPMENT_TEAM = 739NVR7T9C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BirdIdentifier/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Need to Access the Camera for taking Photos of Birds.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 3.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sharansajivmenon.BirdIdentifier;
 				PRODUCT_NAME = "Bird Identifier";
 				SWIFT_EMIT_LOC_STRINGS = YES;

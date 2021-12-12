@@ -45,6 +45,7 @@ struct ObservationItemView: View {
                 Group {
                     NavigationLink(
                         destination: BirdInfo(name: .constant(getInfo().scientific))
+                            .navigationTitle(getInfo().common)
                     ) {
                         HStack {
                             VStack {

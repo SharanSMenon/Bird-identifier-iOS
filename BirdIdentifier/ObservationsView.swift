@@ -22,7 +22,8 @@ struct ObservationsView: View {
         NavigationView {
             List {
                 ForEach(items, id: \.id) { item in
-                    NavigationLink(destination:ObservationItemView(observation: item)) {
+                    NavigationLink(destination:ObservationItemView(observation: item)
+                                    .navigationTitle(birdData.getInfo(scientific: item.scientific!).common)) {
                         VStack(alignment:.leading) {
                             HStack {
                                 Text(birdData.getInfo(scientific: item.scientific!).common)

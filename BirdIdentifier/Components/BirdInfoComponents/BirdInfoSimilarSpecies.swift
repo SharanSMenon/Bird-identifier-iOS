@@ -23,6 +23,7 @@ struct BirdInfoSimilarSpecies: View {
                     ForEach (similarSpecies, id: \.scientific) { s in
                         NavigationLink(destination: {
                             NavigationLazyView(BirdInfo(name: .constant(s.scientific)))
+                                .navigationTitle(s.common)
                         }) {
                             VStack(alignment:.leading) {
                                 HStack {

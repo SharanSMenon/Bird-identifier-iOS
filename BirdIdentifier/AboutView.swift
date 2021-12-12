@@ -18,7 +18,7 @@ struct AboutView: View {
             Divider()
             Text("An app created to identify birds given an image. The model is capable of identifying around 900 species of birds.")
             Text("")
-            Text("Simplly pick an image from your camera roll or shoot a photo, and the AI will identify it for you. Click on the classification to learn more about the species and view similar species.")
+            Text("Simply pick an image from your camera roll or shoot a photo, and the AI will identify it for you. Click on the classification to learn more about the species and view similar species.")
             Spacer()
             GroupBox(label: Label("Donate", systemImage: "dollarsign.circle")) {
                 HStack {
@@ -36,7 +36,7 @@ struct AboutView: View {
                     Spacer()
                 }
             }
-            GroupBox(label: Label("Links", systemImage: "link.circle")) {
+            GroupBox(label: Label("Report bugs", systemImage: "ladybug")) {
                 HStack {
                     VStack(alignment: .leading) {
                         Link("Code on Github", destination: URL(string: "https://github.com/SharanSMenon/Bird-identifier-iOS")!)

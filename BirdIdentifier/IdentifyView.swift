@@ -13,12 +13,15 @@ struct Identify: View {
     @State private var showInfoSheet = false;
     @State private var image = UIImage()
     @State private var classification: String = "";
+    @State private var otherPredictions: [String] = [];
     @State private var displayName: String = "";
+    @State private var imageSaved: Bool = false;
+    
     @ObservedObject var birdData = ReadData()
     let screenSize: CGRect = UIScreen.main.bounds
     
     let predictor = ImagePredictor()
-    let predictionsToShow = 1
+    let predictionsToShow = 5;
     
     var body: some View {
         VStack {
@@ -29,12 +32,12 @@ struct Identify: View {
                 .frame(minWidth: 0, maxWidth: .infinity, maxHeight:screenSize.height-250)
                 .overlay(alignment:.bottomLeading) {
                     if classification != "" {
-                        IdentifyViewClassification(classification: self.classification, displayName: self.displayName, showInfoSheet: self.$showInfoSheet)
+                        IdentifyViewClassification(classification: self.classification, displayName: (classification == birdData.getInfo(scientific: classification).scientific) ? self.displayName: getGenusSpecies(s: classification), predictionList: otherPredictions, showInfoSheet: self.$showInfoSheet)
                     }
                 }
                 .overlay(alignment:.topLeading) {
                     if classification != "" && classification != "background" {
-                        SaveObservationButton(observedImage: self.image, name:self.classification)
+                        SaveObservationButton(observedImage: self.$image, name:self.$classification, saved: self.$imageSaved)
                     }
                 }
             } else {
@@ -44,6 +47,8 @@ struct Identify: View {
             Spacer()
             HStack(spacing:0) {
                 Button(action: {
+                    let impactMed = UIImpactFeedbackGenerator(style: .soft)
+                    impactMed.impactOccurred()
                     self.showPhotoLibrary = true
                 }) {
                     HStack {
@@ -56,6 +61,8 @@ struct Identify: View {
                 }
                 .buttonStyle(BlueButton())
                 Button(action: {
+                    let impactMed = UIImpactFeedbackGenerator(style: .soft)
+                    impactMed.impactOccurred()
                     self.showCamera = true
                 }) {
                     HStack {
@@ -85,6 +92,12 @@ struct Identify: View {
         classifyImage(image: image)
     }
     
+    private func getGenusSpecies(s: String) -> String {
+        let genus = s.components(separatedBy: " ")[0]
+        let genusData: [Bird] = birdData.getGenus(genus: genus)
+        return genusData[0].common
+    }
+    
     private func classifyImage(image: UIImage) {
         do {
             try self.predictor.makePredictions(for: image, completionHandler: imagePredictionHandler)
@@ -96,8 +109,14 @@ struct Identify: View {
             return
         }
         let formattedPredictions = formatPredictions(predictions)
+        self.otherPredictions = formattedPredictions
         self.classification = formattedPredictions[0]
-        print(self.classification)
+        Haptics.shared.notify(.success)
+        if formattedPredictions[0] != "background" {
+            let birdInfo = birdData.getInfo(scientific: formattedPredictions[0])
+            self.displayName = birdInfo.common
+            self.imageSaved = false;
+        }
     }
     private func formatPredictions(_ predictions: [ImagePredictor.Prediction]) -> [String] {
         let topPredictions: [String] = predictions.prefix(predictionsToShow).map { prediction in
@@ -105,10 +124,6 @@ struct Identify: View {
 
             if let firstComma = name.firstIndex(of: ",") {
                 name = String(name.prefix(upTo: firstComma))
-            }
-            if name != "background" {
-                let birdInfo = birdData.getInfo(scientific: name)
-                self.displayName = birdInfo.common
             }
             return "\(name)";
         }

@@ -76,3 +76,28 @@ struct iNatResponse: Decodable {
     let per_page: Int?
     let results: [iNatResult]
 }
+
+struct iNaturalistAPI {
+    let scientificName: String;
+    
+    func callAPI(completionHandler: @escaping (_ data: iNatResponse) -> Void) -> Void {
+        let speciesText = scientificName.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        let url = URL(string: "https://api.inaturalist.org/v1/taxa?q=\(speciesText!)&rank=species")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        let task = URLSession.shared.dataTask(with: url) {data, response, error in
+            if let data = data {
+                do {
+                    let bird = try JSONDecoder().decode(iNatResponse.self, from: data)
+                    completionHandler(bird);
+                } catch {
+                    print(error)
+                }
+            } else if let error = error {
+                print("Request Failed \(error)")
+            }
+        }
+        task.resume()
+    }
+}
