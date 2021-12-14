@@ -26,20 +26,20 @@ struct Identify: View {
     var body: some View {
         VStack {
             if classification != "" {
-            Image(uiImage: self.image)
-                .resizable()
-                .scaledToFill()
-                .frame(minWidth: 0, maxWidth: .infinity, maxHeight:screenSize.height-250)
-                .overlay(alignment:.bottomLeading) {
-                    if classification != "" {
-                        IdentifyViewClassification(classification: self.classification, displayName: (classification == birdData.getInfo(scientific: classification).scientific) ? self.displayName: getGenusSpecies(s: classification), predictionList: otherPredictions, showInfoSheet: self.$showInfoSheet)
+                Image(uiImage: self.image)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(minWidth: 0, maxWidth: .infinity, maxHeight:screenSize.height-250)
+                    .overlay(alignment:.bottomLeading) {
+                        if classification != "" {
+                            IdentifyViewClassification(classification: self.classification, displayName: (classification == birdData.getInfo(scientific: classification).scientific) ? self.displayName: getGenusSpecies(s: classification), predictionList: otherPredictions, showInfoSheet: self.$showInfoSheet)
+                        }
                     }
-                }
-                .overlay(alignment:.topLeading) {
-                    if classification != "" && classification != "background" {
-                        SaveObservationButton(observedImage: self.$image, name:self.$classification, saved: self.$imageSaved)
+                    .overlay(alignment:.topLeading) {
+                        if classification != "" && classification != "background" {
+                            SaveObservationButton(observedImage: self.$image, name:self.$classification, saved: self.$imageSaved)
+                        }
                     }
-                }
             } else {
                 Spacer()
                 Text("Take a photo or select an image")
@@ -95,7 +95,11 @@ struct Identify: View {
     private func getGenusSpecies(s: String) -> String {
         let genus = s.components(separatedBy: " ")[0]
         let genusData: [Bird] = birdData.getGenus(genus: genus)
-        return genusData[0].common
+        if genusData.count > 0 {
+            return genusData[0].common
+        } else {
+            return birdData.getMock()[0].common
+        }
     }
     
     private func classifyImage(image: UIImage) {
@@ -108,20 +112,31 @@ struct Identify: View {
             print("No Prediction")
             return
         }
-        let formattedPredictions = formatPredictions(predictions)
-        self.otherPredictions = formattedPredictions
-        self.classification = formattedPredictions[0]
-        Haptics.shared.notify(.success)
-        if formattedPredictions[0] != "background" {
-            let birdInfo = birdData.getInfo(scientific: formattedPredictions[0])
-            self.displayName = birdInfo.common
-            self.imageSaved = false;
+        if Float(predictions[0].confidence)! > 10.9 {
+            let formattedPredictions = formatPredictions(predictions)
+            self.otherPredictions = formattedPredictions
+            self.classification = formattedPredictions[0]
+            if formattedPredictions[0] != "background" {
+                Haptics.shared.notify(.success)
+                let birdInfo = birdData.getInfo(scientific: formattedPredictions[0])
+                self.displayName = birdInfo.common
+                self.imageSaved = false;
+            }
+            if formattedPredictions[0] == "background" {
+                Haptics.shared.notify(.error)
+                self.classification = "background"
+                self.displayName = "none"
+            }
+        } else {
+            Haptics.shared.notify(.error)
+            self.classification = "background"
+            self.displayName = "none"
         }
     }
     private func formatPredictions(_ predictions: [ImagePredictor.Prediction]) -> [String] {
         let topPredictions: [String] = predictions.prefix(predictionsToShow).map { prediction in
             var name = prediction.classification
-
+            
             if let firstComma = name.firstIndex(of: ",") {
                 name = String(name.prefix(upTo: firstComma))
             }

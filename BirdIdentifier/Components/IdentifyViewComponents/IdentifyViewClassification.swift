@@ -44,17 +44,20 @@ struct IdentifyViewClassification: View {
                             }
                             
                         }
+                        Divider()
+                        HStack {
+                            Button(action: {
+                                self.showPredictionsSheet = true
+                                print(predictionList);
+                            }) {
+                                Text("View more predictions")
+                            }
+                            .sheet(isPresented:$showPredictionsSheet) {
+                                PredictionList(predictions:predictionList)
+                            }
+                            Spacer()
+                        }
                     }
-                }
-                Divider()
-                Button(action: {
-                    self.showPredictionsSheet = true
-                    print(predictionList);
-                }) {
-                    Text("View more predictions")
-                }
-                .sheet(isPresented:$showPredictionsSheet) {
-                    PredictionList(predictions:predictionList)
                 }
             }
             .padding()

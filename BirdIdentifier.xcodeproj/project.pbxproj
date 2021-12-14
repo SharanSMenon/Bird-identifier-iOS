@@ -77,7 +77,6 @@
 		0FDB7700275BDC890023148C /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 		0FDB7702275BDDDB0023148C /* FamilyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyView.swift; sourceTree = "<group>"; };
 		0FDB7704275BDF530023148C /* GenusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenusView.swift; sourceTree = "<group>"; };
-		0FE1D1C3274890A10013FF01 /* birds-model-964.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; name = "birds-model-964.tflite"; path = "../../../../../birds-model-964.tflite"; sourceTree = "<group>"; };
 		0FE4AD0327651B500085547C /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 		0FE4AD05276525C60085547C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0FEAB63027495C5500C953A5 /* ImagePredictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePredictor.swift; sourceTree = "<group>"; };
@@ -212,7 +211,6 @@
 			isa = PBXGroup;
 			children = (
 				0FEAB6342749628C00C953A5 /* BirdModel.mlmodel */,
-				0FE1D1C3274890A10013FF01 /* birds-model-964.tflite */,
 				0FEAB63027495C5500C953A5 /* ImagePredictor.swift */,
 			);
 			path = "ml-model";
