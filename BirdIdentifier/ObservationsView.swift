@@ -35,14 +35,13 @@ struct ObservationsView: View {
                                     .font(.subheadline)
                             }
                         }
-                        .padding()
-                        .cornerRadius(20)
-                        .frame(maxWidth:.infinity)
-                        .background(
-                            colorScheme == .light ? Color(red: 238/255, green:238/255, blue: 238/255) : Color(red: 39/255, green:39/255, blue: 39/255)
-                        )
-                        .shadow(radius: 5)
                     }
+                    .padding()
+                    .background(
+                        colorScheme == .light ? Color(red: 238/255, green:238/255, blue: 238/255) : Color(red: 39/255, green:39/255, blue: 39/255)
+                    )
+                    .cornerRadius(10)
+                    .shadow(radius: 5)
                 }
                 .onDelete(perform: deleteItem)
                 .listRowSeparator(.hidden)

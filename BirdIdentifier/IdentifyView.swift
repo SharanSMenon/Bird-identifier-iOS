@@ -25,6 +25,18 @@ struct Identify: View {
     
     var body: some View {
         VStack {
+            if classification == "" {
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("Bird Identifier")
+                            .font(.largeTitle)
+                        .bold()
+                        Text("By Sharan Sajiv Menon")
+                            .font(.subheadline)
+                    }
+                    Spacer()
+                }.padding()
+            }
             if classification != "" {
                 Image(uiImage: self.image)
                     .resizable()
@@ -74,7 +86,7 @@ struct Identify: View {
                     }
                 }
                 .buttonStyle(BlueButton())
-            }
+            }.padding([.bottom])
             Divider()
         }
         .sheet(isPresented: $showPhotoLibrary) {
@@ -142,7 +154,6 @@ struct Identify: View {
             }
             return "\(name)";
         }
-        
         return topPredictions
     }
 }

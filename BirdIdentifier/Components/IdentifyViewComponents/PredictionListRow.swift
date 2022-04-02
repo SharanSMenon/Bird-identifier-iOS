@@ -57,11 +57,14 @@ struct PredictionListRow: View {
     }
     
     func getInfo() -> Bird {
+        print(scientificName)
         let data = birdData.getInfo(scientific: scientificName)
         if data.scientific != scientificName {
             let genus = scientificName.components(separatedBy: " ")[0]
             let genusData = birdData.getGenus(genus: genus)
-            print(genusData)
+            if (genusData.count == 0) {
+                return Bird(scientific: self.scientificName, common: self.scientificName, family: "Unknown", order: "Unknown", genus: "Unknown")
+            }
             return genusData[0]
         }
         return data

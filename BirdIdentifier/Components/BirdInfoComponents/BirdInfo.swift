@@ -42,10 +42,15 @@ struct BirdInfo: View {
         return genus
     }
     private func getInfo() -> Bird {
+        print(self.name)
         let data = birdData.getInfo(scientific: self.name)
         if data.scientific != self.name {
+            print(self.name)
             let genus = self.name.components(separatedBy: " ")[0]
             let genusData = birdData.getGenus(genus: genus)
+            if (genusData.count == 0) {
+                return Bird(scientific: self.name, common: "Unknown", family: "Unknown", order: "Unknown", genus: "Unknown")
+            }
             return genusData[0]
         }
         return data
