@@ -14,6 +14,12 @@ The app makes calls to the iNaturalist API to obtain images of Birds.
 - Offline identification
 - Fast load times (no non-apple frameworks are used)
 
+## Roadmap
+
+- Allow users to edit observations
+- Add better loading indicators
+- Release a macOS app (long-term)
+
 ## Bugs
 
 If you find a bug, report it in the Issues tab.
